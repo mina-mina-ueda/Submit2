@@ -27,7 +27,7 @@
             <%= link_to book.show, book_path(book.id) %>Show  
           </td>
           <td>
-            <%= link_to book.edit, edit_book_path(:id/edit) %>Edit  
+            <%= link_to book.edit, edit_book_path(book.id/edit) %>Edit  
           </td>
           <td>
             <a data-confirm="Are you sure?" class="destroy_?" rel="nofollow" data-method="delete" href="/book/?">Destroy</a>

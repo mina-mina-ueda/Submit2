@@ -8,6 +8,11 @@
   <%= link_to @book.body %>
 </span>
 
-<%=link_to "Edit"|,edit_book_path(@book.id) %> <%=link_to "Back", index_book_path(@list.id) %>
+<%=link_to book.edit,book_path(book.id/edit)  "Edit"%> 
+"|"
+<%=link_to book.index,book_path "Back"  %>
+
+<%= link_to "Edit",edit_book_path(@edit) %>
+<%= link_to "Destroy",book_path(@book), method: :delete %>
 
 
