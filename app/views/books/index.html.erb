@@ -14,24 +14,21 @@
           <td colspan="3"></td>
         </tr>  
       </thead>    
-    <tbody>
+      <tbody>
       <% @books.each do |book| %>
         <tr>
           <td class="book-title"> <%= book.title %></td>
           <td class="book-body"> <%= book.body %></td>
-          <td>
-            <%= link_to "Show", book_path(book.id) %>
-          </td>
-            <a data-confirm="Are you sure?" class="destroy_?" rel="nofollow" data-method="delete" href="/book/?">Destroy</a>
-          </td>
+          <td><%= link_to "Show", book_path(book.id) %></td>
+          <td><%= link_to "Edit", edit_book_path(book.id) %></td>
+          <td><%= link_to "Destroy", book_path(id), method: :delete %></td> 
         </tr> 
       <% end %>
-    </tbody>
+      </tbody>
     </table>
     
     <h2>New book</h2>
     <%= form_with model:@book, local:true do |f| %>
-
       <div class="field">
         <h4>title</h4>
         <%= f.text_field :title %>
@@ -45,7 +42,6 @@
       <div class="action">
         <%= f.submit 'Create Book' %>
       </div>
-  
-    <% end %>
+   <% end %>
   </body>  
 </html>
