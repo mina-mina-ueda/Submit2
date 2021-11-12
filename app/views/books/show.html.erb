@@ -1,18 +1,13 @@
-<h2>Title</h2>
-  <span>
-  <%= link_to @book.title %>
-  </span>
+<p>Book was successfully created.</p>
 
-<h2>Body</h2>
-<span>
-  <%= link_to @book.body %>
-</span>
+<h2>Title:</h2>
+  <%= @book.title %>
+  
+<h2>Body:</h2>
+  <%= @book.body %>
 
-<%= link_to book.edit,book_path(book.id/edit)  "Edit"%> 
-"|"
-<%= link_to book.index,book_path "Back"  %>
-
-<%= link_to "Edit",edit_book_path(@edit) %>
-<%= link_to "Destroy",book_path(@book), method: :delete %>
+<%= link_to "Edit",edit_book_path(@book.id) %>
+   | 
+<%= link_to "Back",books_path %>
 
 
