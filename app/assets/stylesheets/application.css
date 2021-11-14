@@ -11,3 +11,10 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tre
+ */
+ 
+ p{
+  margin-left: 30px;
+ } 
+ 
+ 
